@@ -176,6 +176,7 @@ class FakespotViewController: UIViewController, Themeable, UIAdaptivePresentatio
         case .loadingView:
             let view: FakespotLoadingView = .build()
             return view
+            
         case .onboarding:
             let view: FakespotOptInCardView = .build()
             viewModel.optInCardViewModel.dismissViewController = { [weak self] in
