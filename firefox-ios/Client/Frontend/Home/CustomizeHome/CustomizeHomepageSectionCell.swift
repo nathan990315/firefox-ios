@@ -25,9 +25,9 @@ class CustomizeHomepageSectionCell: UICollectionViewCell, ReusableCell {
         button.layer.cornerRadius = UX.buttonCornerRadius
         button.accessibilityIdentifier = a11y.customizeHome
         button.contentEdgeInsets = UIEdgeInsets(top: UX.buttonVerticalInset,
-                                                left: LegacyResizableButton.UX.buttonEdgeSpacing,
+                                                left: ResizableButton.UX.buttonEdgeSpacing,
                                                 bottom: UX.buttonVerticalInset,
-                                                right: LegacyResizableButton.UX.buttonEdgeSpacing)
+                                                right: ResizableButton.UX.buttonEdgeSpacing)
     }
 
     // MARK: - Initializers

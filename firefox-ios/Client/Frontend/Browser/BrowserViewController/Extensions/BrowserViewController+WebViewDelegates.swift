@@ -904,8 +904,8 @@ private extension BrowserViewController {
         let origin = "\(challenge.protectionSpace.host):\(challenge.protectionSpace.port)"
 
         guard let trust = challenge.protectionSpace.serverTrust,
-              let cert = SecTrustGetCertificateAtIndex(trust, 0),
-              profile.certStore.containsCertificate(cert, forOrigin: origin)
+              let cert = SecTrustCopyCertificateChain(trust ),
+              profile.certStore.containsCertificate(cert as! SecCertificate, forOrigin: origin)
         else {
             completionHandler(.performDefaultHandling, nil)
             return
